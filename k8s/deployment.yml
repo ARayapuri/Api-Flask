@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: flask-api-python-app
-          image: karthikamn/flask-api-python-app:latest
+          image: arayapuri/flask-api-python-app:latest
           ports:
             - containerPort: 5000  # Adjust based on your app's listening port  
