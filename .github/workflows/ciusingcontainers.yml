@@ -1,4 +1,4 @@
-name: CI/CD Docker
+name: CI with Docker
 
 on:
   workflow_dispatch  # Manual trigger, can add push trigger if needed
