@@ -34,3 +34,11 @@ jobs:
      run : |
       kubectl apply -f k8s/deployment.yml
       kubectl apply -f k8s/service.yml
+   - name: Docker Login
+     run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+
+   - name: Push Docker Image
+     run: |
+       docker push $DOCKER_IMAGE:${{ github.sha }}
+       docker push $DOCKER_IMAGE:latest
+
