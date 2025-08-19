@@ -4,7 +4,7 @@ on:
   workflow_dispatch  # Manual trigger, can add push trigger if needed
 
 env:
-  DOCKER_IMAGE: karthikamn/my-python-api-flask
+  DOCKER_IMAGE: arayapuri/my-python-api-flask
 
 jobs:
   build-and-deploy:
