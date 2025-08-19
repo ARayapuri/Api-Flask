@@ -20,7 +20,7 @@ jobs:
       docker tag $DOCKER_IMAGE:${{github.sha}} $DOCKER_IMAGE:latest
 
    - name: Docker Login
-     run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+     run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
    - name: Push Docker Image
      run: |
